@@ -18,20 +18,20 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 
-def multiply(a, b):
+def mul(a, b):
     return a * b
 
-def divide(a, b):
-    if b == 0:
+def div(a, b):
+    if a == 0:
         raise ZeroDivisionError("Cannot divide by zero")
-    return a / b
+    return b / a
 
 def logarithm(a, b):
-    if a <= 0 or b <= 0 or b ==1:
+    if a <= 1 or b <= 0:
         raise ValueError("Invalid logarithm input")
     return math.log(a, b)
 
-def exponent(a, b):
+def exp(a, b):
     return a ** b
 
 def square_root(a):
