@@ -1,16 +1,20 @@
+#https://github.com/saffirebandril/lab10-SB-SE.git
+#Partner 1: Saffire Bandril
+#Partner 2: Sebastian Estrada
+
 import unittest
 from calculator import *
-import calculator
 
 class TestCalculator(unittest.TestCase):
     def test_add(self):
-        self.assertEqual(calculator.add(1,2),3)
-        self.assertEqual(calculator.add(-5,5),0)
-        self.assertEqual(calculator.add(10,-3),7)
+        self.assertEqual(add(1,2),3)
+        self.assertEqual(add(-5,5),0)
+        self.assertEqual(add(10,-3),7)
+
     def test_sub(self):
-        self.assertEqual(calculator.subtract(5,2),3)
-        self.assertEqual(calculator.subtract(10,10),0)
-        self.assertEqual(calculator.subtract(-3,-6),3)
+        self.assertEqual(subtract(5,2),3)
+        self.assertEqual(subtract(10,10),0)
+        self.assertEqual(subtract(-3,-6),3)
 
     def test_multiply(self):
         self.assertEqual(mul(3, 5), 15)
@@ -24,24 +28,26 @@ class TestCalculator(unittest.TestCase):
 
     def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
-            calculator.divide(10,0)
+            div(0, 10)
+
     def test_logarithm(self):
-        self.assertEqual(calculator.logarithm(8,2),3)
-        self.assertEqual(calculator.logarithm(27,3),3)
-        self.assertEqual(calculator.logarithm(1,10),0)
+        self.assertEqual(logarithm(10,100),2)
+        self.assertEqual(logarithm(2,16),4)
+        self.assertEqual(logarithm(9,3),0.5)
+
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
-            calculator.logarithm(10,1)
+            logarithm(10,-1)
 
-    def test_log_invalid_argument(self): # 1 assertion
+    def test_log_invalid_argument(self):
         self.assertRaises(ValueError,logarithm, 0, 5)
 
-    def test_hypotenuse(self): # 3 assertions
+    def test_hypotenuse(self):
         self.assertEqual(hypotenuse(3,4),5)
         self.assertEqual(hypotenuse(6,8),10)
         self.assertNotEqual(hypotenuse(10,20),20)
 
-    def test_sqrt(self): # 3 assertions
+    def test_sqrt(self):
         self.assertRaises(ValueError, square_root, -1)
         self.assertEqual(square_root(1),1)
         self.assertNotEqual(square_root(2),2)
