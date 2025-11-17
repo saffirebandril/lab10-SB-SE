@@ -8,9 +8,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.add(-5,5),0)
         self.assertEqual(calculator.add(10,-3),7)
     def test_sub(self):
-        self.assertEqual(calculator.subtract(5,2),3)
-        self.assertEqual(calculator.subtract(10,10),0)
-        self.assertEqual(calculator.subtract(-3,-6),3)
+        self.assertEqual(calculator.sub(5,2),3)
+        self.assertEqual(calculator.sub(10,10),0)
+        self.assertEqual(calculator.sub(-3,-6),3)
 
     ######## Partner 1
     # def test_multiply(self): # 3 assertions
@@ -23,9 +23,9 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ZeroDivisionError):
             calculator.divide(10,0)
     def test_logarithm(self):
-        self.assertEqual(calculator.logarithm(8,2),3)
-        self.assertEqual(calculator.logarithm(27,3),3)
-        self.assertEqual(calculator.logarithm(1,10),0)
+        self.assertEqual(calculator.log(8,2),3)
+        self.assertEqual(calculator.log(27,3),3)
+        self.assertEqual(calculator.log(1,10),0)
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
             calculator.logarithm(10,1)
