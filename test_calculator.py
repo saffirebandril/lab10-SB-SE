@@ -1,3 +1,7 @@
+#https://github.com/saffirebandril/lab10-SB-SE.git
+#Partner 1: Saffire Bandril
+#Partner 2: Sebastian Estrada
+
 import unittest
 from calculator import *
 
