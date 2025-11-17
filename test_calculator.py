@@ -52,6 +52,7 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             square_root(-1)
         self.assertEqual(square_root(1),1)
+        self.assertEqual(square_root(9),3)
         self.assertNotEqual(square_root(2),2)
 
 
